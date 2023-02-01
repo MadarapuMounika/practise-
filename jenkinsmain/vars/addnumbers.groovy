@@ -1,5 +1,5 @@
-def call(String a, String b) {
-  def x = Integer.parseInt(a)
-  def y = Integer.parseInt(b)
-  return x + y
+#!/usr/bin/env groovy
+
+def call(String name = 'human') {
+  echo "Hello, ${name}."
 }

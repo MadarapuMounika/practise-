@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  libraries {
+    library('')
+  }
+  stages {
+    stage('Add Numbers') {
+      steps {
+        script {
+          def result = addNumbers(params.num1, params.num2)
+          echo "The result of adding ${params.num1} and ${params.num2} is ${result}"
+        }
+      }
+    }
+  }
+}
